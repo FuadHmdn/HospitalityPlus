@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+   <children>
+      <BorderPane fx:id="menuHome1" prefHeight="200.0" prefWidth="200.0">
+         <bottom>
+            <ImageView fitHeight="450.0" fitWidth="702.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@sdasd.jpg" />
+               </image>
+            </ImageView>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="51.0" prefWidth="702.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="30.0" layoutY="10.0" text="HospitalityPlus" textFill="#254187">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="221.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #254187;" text="Home" textFill="#ebb505">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="299.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolRooomHome" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="Rooms" textFill="#254187">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="377.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Service" textFill="#254187">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="456.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Contact" textFill="#254187">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="580.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolLogOutHome" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Log Out" textFill="#254187">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Line endX="15.0" endY="-17.0" layoutX="542.0" layoutY="26.0" startX="15.0" startY="15.0" stroke="#431da3" strokeWidth="2.0" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+      <AnchorPane fx:id="menuHome2" prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15 15 0 0;">
+         <StackPane.margin>
+            <Insets left="50.0" right="50.0" top="430.0" />
+         </StackPane.margin>
+         <children>
+            <Button fx:id="BookNowHome" layoutX="503.0" layoutY="35.0" mnemonicParsing="false" onAction="#tombolBookNowHome" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #254187; -fx-background-radius: 15 15 15 15;" text="Book Now" textFill="#ffe31c" />
+            <DatePicker fx:id="tanggalMinap" layoutX="138.0" layoutY="35.0" prefHeight="25.0" prefWidth="99.0" promptText="Arival Date" />
+            <DatePicker fx:id="tanggalPulang" layoutX="250.0" layoutY="35.0" prefHeight="25.0" prefWidth="131.0" promptText="Deparature Date" />
+            <Label layoutX="47.0" layoutY="9.0" prefHeight="17.0" prefWidth="85.0" text="Jenis Kamar" textFill="#254187">
+               <font>
+                  <Font name="Poppins Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="9.0" prefHeight="17.0" prefWidth="83.0" text="Arival Date" textFill="#254187">
+               <font>
+                  <Font name="Poppins Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="9.0" prefHeight="17.0" prefWidth="117.0" text="Deparature Date" textFill="#254187">
+               <font>
+                  <Font name="Poppins Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="390.0" layoutY="9.0" prefHeight="17.0" prefWidth="56.0" text="Guest" textFill="#254187">
+               <font>
+                  <Font name="Poppins Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="jumlahTamu" layoutX="390.0" layoutY="35.0" prefHeight="25.0" prefWidth="99.0" promptText="Guest" />
+            <ChoiceBox fx:id="jeniskamar" layoutX="46.0" layoutY="35.0" prefHeight="25.0" prefWidth="79.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuRoom" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="51.0" prefWidth="702.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="30.0" layoutY="10.0" text="HospitalityPlus" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="221.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolHomeRoom" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="Home" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="299.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolRooomHome" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #254187;" text="Rooms" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="377.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Service" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="456.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Contact" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="580.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolLogOutRoom" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Log Out" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="15.0" endY="-17.0" layoutX="542.0" layoutY="26.0" startX="15.0" startY="15.0" stroke="#254187" strokeWidth="2.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <AnchorPane layoutY="60.0" prefHeight="245.0" prefWidth="702.0">
+               <children>
+                  <ImageView fitHeight="238.0" fitWidth="702.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/R.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="namaHotelRajabasa" layoutX="155.0" layoutY="190.0" text="Rajabasa Hotel" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="69.0" layoutY="190.0" prefHeight="76.0" prefWidth="75.0" style="-fx-background-color: #254187; -fx-background-radius: 10 10 10 10;">
+                     <children>
+                        <Label fx:id="rating" layoutX="9.0" layoutY="14.0" text="9.1" textFill="#fcbd00">
+                           <font>
+                              <Font name="DINNextCYR-Heavy" size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="613.0" layoutY="81.0" mnemonicParsing="false" onAction="#next1" prefHeight="17.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="&gt;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="76.0" layoutY="332.0" text="1.023 Review">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="29.0" layoutY="348.0" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" text="Book Now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#BookNowRajabasa" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="27.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/6102292.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="30.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/4573299.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="59.0" layoutY="383.0" text="Simpan" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="409.0" text="Favorite" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="435.0" text="Great Location">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="443.0" text="8.5">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="499.0" layoutY="247.0" prefHeight="253.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 10 0 0;">
+               <children>
+                  <Label fx:id="namaHotel" layoutX="38.0" layoutY="24.0" text="RAJABASA">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="61.0" layoutX="90.0" layoutY="61.0" startX="-62.0" />
+                  <Label layoutX="65.0" layoutY="65.0" text="Lampung" />
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="7.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/478145.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="33.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jl. Suka Damai No. 1 " />
+                  <Text layoutX="33.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rajabasa, Kota Imaginasi" />
+                  <Label fx:id="jenisHotel" layoutX="16.0" layoutY="134.0" text="VIP">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="16.0" layoutY="151.0" prefHeight="96.0" prefWidth="141.0" textAlignment="JUSTIFY">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rajabasa Paradise Hotel bertekadmemberikan pengalaman menginapyang istimewa dan membuat setiaptamu merasa seperti di surga" textAlignment="JUSTIFY" wrappingWidth="192.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Text>
+                     </children>
+                  </TextFlow>
+               </children>
+            </AnchorPane>
+            <TextFlow layoutX="157.0" layoutY="306.0" prefHeight="83.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat datang di Rajabasa Paradise Hotel, sebuah destinasi mewah di tengah-tengah Kota Imaginasi yang menawarkan pengalaman menginap luar biasa.  Hotel ini menjelma menjadi tempat idaman bagi wisatawan yang menginginkan kemewahan dan kenyamanan dalam satu paket eksklusif.">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Text>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="157.0" layoutY="385.0" prefHeight="54.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dibangun dengan arsitektur yang memukau, Rajabasa Paradise Hotel memancarkan aura kemewahan sejak langkah pertama Anda melangkah masuk. ">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Text>
+               </children>
+            </TextFlow>
+            <AnchorPane layoutX="157.0" layoutY="449.0" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" onDragDetected="#LihatSemuaFasilitas" prefHeight="25.0" prefWidth="180.0" text="Lihat Semua Fasilitas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="2.0" mnemonicParsing="false" onAction="#lihatFasilitasRajabasa" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="371.0" layoutY="447.0" prefHeight="36.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shopping-cart-371979_960_720.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonKeranjang1" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuRoom1" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="51.0" prefWidth="702.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="30.0" layoutY="10.0" text="HospitalityPlus" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="221.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolHomeRoom" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="Home" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="299.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolRooomHome" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #254187;" text="Rooms" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="377.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Service" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="456.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Contact" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="580.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolLogOutRoom" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Log Out" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="15.0" endY="-17.0" layoutX="542.0" layoutY="26.0" startX="15.0" startY="15.0" stroke="#254187" strokeWidth="2.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <AnchorPane layoutY="60.0" prefHeight="245.0" prefWidth="702.0">
+               <children>
+                  <ImageView fitHeight="238.0" fitWidth="702.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="namaHotelHarmoni" layoutX="155.0" layoutY="190.0" text="Harmoni Hotel" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="69.0" layoutY="190.0" prefHeight="76.0" prefWidth="75.0" style="-fx-background-color: #254187; -fx-background-radius: 10 10 10 10;">
+                     <children>
+                        <Label fx:id="rating1" layoutX="9.0" layoutY="14.0" text="8.2" textFill="#fcbd00">
+                           <font>
+                              <Font name="DINNextCYR-Heavy" size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="613.0" layoutY="79.0" mnemonicParsing="false" onAction="#next2" prefHeight="17.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="&gt;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="76.0" layoutY="332.0" text="1.023 Review">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="29.0" layoutY="348.0" onDragDetected="#BookingNowHarmoni" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" text="Book Now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="2.0" mnemonicParsing="false" onAction="#BookingNowHarmoni" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="27.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/6102292.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="30.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/4573299.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="59.0" layoutY="383.0" text="Simpan" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="409.0" text="Favorite" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="435.0" text="Great Location">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="443.0" text="7.4">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="499.0" layoutY="247.0" prefHeight="253.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 10 0 0;">
+               <children>
+                  <Label fx:id="namaHotel1" layoutX="44.0" layoutY="22.0" text="Harmoni">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="61.0" layoutX="90.0" layoutY="61.0" startX="-62.0" />
+                  <Label layoutX="70.0" layoutY="68.0" text="Metro" />
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="7.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/478145.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="33.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jl. Pesona Damai No. 25" />
+                  <Text layoutX="33.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rajabasa, Kota Imaginasi" />
+                  <Label fx:id="jenisHotel1" layoutX="16.0" layoutY="134.0" text="Regular">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="16.0" layoutY="151.0" prefHeight="96.0" prefWidth="141.0" textAlignment="JUSTIFY">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nikmati ketenangan dan kenyamanan sejati di Harmoni Palace Hotel, di mana setiap momen adalah sebuah pelukan keindahan dan keramahan." textAlignment="JUSTIFY" wrappingWidth="192.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
+               </children>
+            </AnchorPane>
+            <TextFlow layoutX="157.0" layoutY="306.0" prefHeight="83.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Harmoni Palace Hotel mengundang Anda ke dunia kemewahan dan keindahan di pusat Kota Idilis. Dengan keanggunan desain dan fasilitas eksklusif, kami berkomitmen untuk menyajikan pengalaman menginap yang memenuhi segala kebutuhan Anda.">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="157.0" layoutY="380.0" prefHeight="54.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dengan arsitektur yang memukau dan layanan yang berkualitas tinggi, hotel ini memberikan pengalaman menginap yang tak terlupakan bagi para tamu yang mencari keseimbangan sempurna antara kenyamanan dan keanggunan.">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <AnchorPane layoutX="157.0" layoutY="449.0" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" onDragDetected="#LihatSemuaFasilitas" prefHeight="25.0" prefWidth="180.0" text="Lihat Semua Fasilitas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" onAction="#lihatFasilitasHarmoni" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="372.0" layoutY="447.0" prefHeight="36.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shopping-cart-371979_960_720.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonKeranjang2" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuRoom2" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="51.0" prefWidth="702.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="30.0" layoutY="10.0" text="HospitalityPlus" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="221.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolHomeRoom" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="Home" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="299.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolRooomHome" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #254187;" text="Rooms" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="377.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Service" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="456.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Contact" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="580.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolLogOutRoom" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Log Out" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="15.0" endY="-17.0" layoutX="542.0" layoutY="26.0" startX="15.0" startY="15.0" stroke="#254187" strokeWidth="2.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <AnchorPane layoutY="60.0" prefHeight="245.0" prefWidth="702.0">
+               <children>
+                  <ImageView fitHeight="238.0" fitWidth="702.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/OIP.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="namaHotelSurya" layoutX="155.0" layoutY="190.0" text="Surya Vista Hotel" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="69.0" layoutY="190.0" prefHeight="76.0" prefWidth="75.0" style="-fx-background-color: #254187; -fx-background-radius: 10 10 10 10;">
+                     <children>
+                        <Label fx:id="rating2" layoutX="9.0" layoutY="14.0" text="9.4" textFill="#fcbd00">
+                           <font>
+                              <Font name="DINNextCYR-Heavy" size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="613.0" layoutY="83.0" mnemonicParsing="false" onAction="#next3" prefHeight="17.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="&gt;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="76.0" layoutY="332.0" text="1.023 Review">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="29.0" layoutY="348.0" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" text="Book Now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#BookingNowSuryaVista" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="27.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/6102292.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="30.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/4573299.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="59.0" layoutY="383.0" text="Simpan" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="409.0" text="Favorite" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="435.0" text="Great Location">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="443.0" text="8.8">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="499.0" layoutY="247.0" prefHeight="253.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 10 0 0;">
+               <children>
+                  <Label fx:id="namaHotel2" layoutX="38.0" layoutY="24.0" text="SuryaVista">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="61.0" layoutX="90.0" layoutY="61.0" startX="-62.0" />
+                  <Label layoutX="76.0" layoutY="60.0" text="Krui" />
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="7.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/478145.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="33.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jl.Pesona Indah No. 18" />
+                  <Text layoutX="33.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serene, Provinsi Bahagia" />
+                  <Label fx:id="jenisHotel2" layoutX="16.0" layoutY="134.0" text="Regular">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="16.0" layoutY="151.0" prefHeight="96.0" prefWidth="141.0" textAlignment="JUSTIFY">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dengan lokasi strategis dan fasilitas terbaik, kami siap menyajikan pengalaman menginap tak terlupakan bagi setiap pelancong yang menghargai kenyamanan." textAlignment="JUSTIFY" wrappingWidth="192.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
+               </children>
+            </AnchorPane>
+            <TextFlow layoutX="157.0" layoutY="306.0" prefHeight="83.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat datang di Surya Vista Resort, destinasi mewah yang terletak di pusat Kota Serene. Menawarkan kombinasi unik antara kemewahan dan kenyamanan, hotel ini menjadi tempat idaman bagi para wisatawan yang mencari pengalaman menginap yang luar biasa. ">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="157.0" layoutY="385.0" prefHeight="54.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dengan desain yang elegan dan layanan eksklusif, Surya Vista Resort mengundang Anda untuk menikmati ketenangan sejati di tengah gemerlap Kota Serene.">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <AnchorPane layoutX="157.0" layoutY="449.0" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" onDragDetected="#LihatSemuaFasilitas" prefHeight="25.0" prefWidth="180.0" text="Lihat Semua Fasilitas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" onAction="#lihatFasilitasSurya" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: transparent;" />
+                  <Button layoutX="-1.0" layoutY="4.0" mnemonicParsing="false" onAction="#lihatFasilitasSurya" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="368.0" layoutY="447.0" prefHeight="36.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shopping-cart-371979_960_720.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonKeranjang3" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuRoom3" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <AnchorPane prefHeight="51.0" prefWidth="702.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="30.0" layoutY="10.0" text="HospitalityPlus" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="221.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolHomeRoom" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="Home" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="299.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolRooomHome" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: #254187;" text="Rooms" textFill="#ebb505">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="377.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;" text="Service" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="456.0" layoutY="12.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Contact" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="580.0" layoutY="12.0" mnemonicParsing="false" onAction="#TombolLogOutRoom" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Log Out" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="15.0" endY="-17.0" layoutX="542.0" layoutY="26.0" startX="15.0" startY="15.0" stroke="#254187" strokeWidth="2.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+            </BorderPane>
+            <AnchorPane layoutY="60.0" prefHeight="245.0" prefWidth="702.0">
+               <children>
+                  <ImageView fitHeight="238.0" fitWidth="702.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/65700345.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="namaHotelKalianda" layoutX="155.0" layoutY="190.0" text="Kalianda Hotel" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="69.0" layoutY="190.0" prefHeight="76.0" prefWidth="75.0" style="-fx-background-color: #254187; -fx-background-radius: 10 10 10 10;">
+                     <children>
+                        <Label fx:id="rating3" layoutX="9.0" layoutY="14.0" text="9.6" textFill="#fcbd00">
+                           <font>
+                              <Font name="DINNextCYR-Heavy" size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="613.0" layoutY="79.0" mnemonicParsing="false" onAction="#next4" prefHeight="17.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="&gt;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="76.0" layoutY="332.0" text="1.023 Review">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="29.0" layoutY="348.0" onDragDetected="#BookingNowKalianda" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" text="Book Now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#BookingNowKalianda" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="27.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/6102292.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="26.0" layoutX="30.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/4573299.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="59.0" layoutY="383.0" text="Simpan" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="409.0" text="Favorite" textFill="#254187">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="435.0" text="Great Location">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="443.0" text="9.5">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="499.0" layoutY="247.0" prefHeight="253.0" prefWidth="180.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 10 0 0;">
+               <children>
+                  <Label fx:id="namaHotel3" layoutX="38.0" layoutY="24.0" text="KALIANDA">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Line endX="61.0" layoutX="90.0" layoutY="61.0" startX="-62.0" />
+                  <Label layoutX="65.0" layoutY="65.0" text="Lampung" />
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="7.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/478145.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="33.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jl.Anggrek Indah No. 25" />
+                  <Text layoutX="33.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalianda,Kota Bunga," />
+                  <Label fx:id="jenisHotel3" layoutX="16.0" layoutY="134.0" text="VIP">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="16.0" layoutY="151.0" prefHeight="96.0" prefWidth="141.0" textAlignment="JUSTIFY">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat di mana kenyamanan bertemu keindahan alam.  Kami menawarkan pengalaman menginap yang istimewa dengan menakjubkan" wrappingWidth="192.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
+               </children>
+            </AnchorPane>
+            <TextFlow layoutX="157.0" layoutY="306.0" prefHeight="83.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat datang di Kalianda Hotel, destinasi eksklusif di pusat Kota Impian yang mempersembahkan pengalaman menginap istimewa. Hotel ini menjadi oase impian bagi para pelancong yang mencari harmoni antara kemewahan dan kenyamanan, ditemani dengan paket eksklusif yang tak tertandingi.">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="157.0" layoutY="385.0" prefHeight="54.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kalianda Hotel memadukan keanggunan desain dengan layanan berkualitas tinggi, menciptakan suasana yang memukau bagi setiap tamu. ">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <AnchorPane layoutX="157.0" layoutY="449.0" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #254187;">
+               <children>
+                  <Label layoutX="19.0" layoutY="2.0" onDragDetected="#LihatSemuaFasilitas" prefHeight="25.0" prefWidth="180.0" text="Lihat Semua Fasilitas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="-2.0" layoutY="2.0" mnemonicParsing="false" onAction="#lihatFasilitasKalianda" prefHeight="25.0" prefWidth="199.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="370.0" layoutY="447.0" prefHeight="36.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/shopping-cart-371979_960_720.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#buttonKeranjang4" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="DetailPesanan" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #3d3d3d; -fx-opacity: 0.40;" />
+            <AnchorPane layoutX="160.0" prefHeight="318.0" prefWidth="440.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20 20 20 20;" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="85.0">
+               <children>
+                  <Label layoutX="116.0" layoutY="8.0" text="Detail Pemesanan">
+                     <font>
+                        <Font name="Poppins Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="61.0" prefHeight="23.0" prefWidth="180.0" text="ID Pemesanan           :">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="84.0" prefHeight="23.0" prefWidth="180.0" text="Email                            :">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="52.0" layoutY="107.0" prefHeight="23.0" prefWidth="180.0" text="Tanggal Menginap   :">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="131.0" prefHeight="23.0" prefWidth="180.0" text="Jumlah Tamu             :">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tanggalPemesanan" layoutX="247.0" layoutY="107.0" text="Tanggal Menginap">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="jumlahtamuPesanan" layoutX="248.0" layoutY="131.0" text="Jumlah Tamu">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="idPemesanan" layoutX="250.0" layoutY="61.0" text="ID Pemesanan">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailPemesanan" layoutX="250.0" layoutY="84.0" text="Email">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="189.0" prefHeight="23.0" prefWidth="249.0" text="Layanan Tambahan ">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="333.0" layoutY="254.0" mnemonicParsing="false" onAction="#LanjutBayar" style="-fx-background-color: #254187;" text="Selanjutnya" textFill="#e1bb12" />
+                  <Button layoutX="280.0" layoutY="254.0" mnemonicParsing="false" onAction="#BatalPesan" text="Batal" />
+                  <Label layoutX="54.0" layoutY="159.0" prefHeight="23.0" prefWidth="180.0" text="ID Kamar                     :">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="IDKamar" layoutX="249.0" layoutY="159.0" text="ID Kamar">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="pilihan" layoutX="247.0" layoutY="188.0" prefHeight="25.0" prefWidth="83.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pembayaranLayar" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="7.0" layoutY="1.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #3d3d3d; -fx-opacity: 0.40;" />
+                  <AnchorPane layoutX="160.0" prefHeight="318.0" prefWidth="440.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20 20 20 20;" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="85.0">
+                     <children>
+                        <Label layoutX="152.0" layoutY="14.0" text="Pembayaran" textFill="#254187">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="70.0" text="Pilih Metode Pembayaran">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Line endX="214.0" layoutX="203.0" layoutY="252.0" startX="-169.0" stroke="#2307a1" />
+                        <Line endX="214.0" layoutX="203.0" layoutY="58.0" startX="-169.0" stroke="#2307a1" />
+                        <Line endX="214.0" layoutX="203.0" layoutY="160.0" startX="-169.0" stroke="#2307a1" />
+                        <AnchorPane fx:id="scenePaypal" prefHeight="318.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="83.0" layoutX="332.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Visa_Inc._logo.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="59.0" fitWidth="124.0" layoutX="173.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@PayPal-Logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="101.0" layoutX="34.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="317.6896514892578" AnchorPane.topAnchor="100.0">
+                                 <image>
+                                    <Image url="@png-clipart-logo-bank-mandiri-credit-card-bank-text-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="173.0" layoutY="138.0" prefHeight="9.0" prefWidth="104.0" style="-fx-background-color: #254187;" />
+                              <Label layoutX="34.0" layoutY="185.0" text="Total Pembayaran">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="212.0" text="Rp">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="sceneVisa" layoutY="1.0" prefHeight="318.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="83.0" layoutX="332.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Visa_Inc._logo.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="59.0" fitWidth="124.0" layoutX="173.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@PayPal-Logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="101.0" layoutX="34.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="317.6896514892578" AnchorPane.topAnchor="100.0">
+                                 <image>
+                                    <Image url="@png-clipart-logo-bank-mandiri-credit-card-bank-text-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="322.0" layoutY="136.0" prefHeight="9.0" prefWidth="104.0" style="-fx-background-color: #254187;" />
+                              <Label layoutX="34.0" layoutY="184.0" text="Total Pembayaran">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="211.0" text="Rp">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="sceneMandiri" layoutY="2.0" prefHeight="318.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="83.0" layoutX="332.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Visa_Inc._logo.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="59.0" fitWidth="124.0" layoutX="173.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@PayPal-Logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="101.0" layoutX="34.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="317.6896514892578" AnchorPane.topAnchor="100.0">
+                                 <image>
+                                    <Image url="@png-clipart-logo-bank-mandiri-credit-card-bank-text-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="32.0" layoutY="137.0" prefHeight="9.0" prefWidth="104.0" style="-fx-background-color: #254187;" />
+                              <Label layoutX="34.0" layoutY="185.0" text="Total Pembayaran">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="34.0" layoutY="212.0" text="Rp">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="TotalPembayaran" layoutX="68.0" layoutY="214.0" text="Total Pembayaran">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="337.0" layoutY="274.0" mnemonicParsing="false" onAction="#bayar" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #254187;" text="Bayar" textFill="#ddc003">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="234.0" layoutY="274.0" mnemonicParsing="false" onAction="#BatalPembayaran" prefHeight="25.0" prefWidth="83.0" text="Batal" />
+                        <Button layoutX="176.0" layoutY="104.0" mnemonicParsing="false" onAction="#Paypal" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: transparent;" />
+                        <Button layoutX="34.0" layoutY="104.0" mnemonicParsing="false" onAction="#Mandiri" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: transparent;" />
+                        <Button layoutX="325.0" layoutY="104.0" mnemonicParsing="false" onAction="#Visa" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: transparent;" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menungguKonfirmasi" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #3d3d3d; -fx-opacity: 0.40;" />
+            <AnchorPane layoutX="209.0" layoutY="151.0" prefHeight="118.0" prefWidth="282.0" style="-fx-background-color: #ffffff; -fx-background-radius: 7 7 7 7;">
+               <children>
+                  <Label layoutX="46.0" layoutY="23.0" text="Menunggu Konfirmasi" textFill="#254187">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Button layoutX="99.0" layoutY="68.0" mnemonicParsing="false" onAction="#MenungguKonfirmasiOK" prefHeight="25.0" prefWidth="85.0" text="OK" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="layarFasilitas" prefHeight="312.0" prefWidth="555.0" visible="false">
+         <children>
+            <AnchorPane layoutX="146.0" layoutY="150.0" prefHeight="127.0" prefWidth="347.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8 8 8 8;">
+               <children>
+                  <TextFlow layoutX="25.0" layoutY="12.0" prefHeight="70.0" prefWidth="303.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Text fx:id="teksFasilitas" strokeType="OUTSIDE" strokeWidth="0.0" text="INI FASILITAS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </children></TextFlow>
+                  <Button layoutX="266.0" layoutY="88.0" mnemonicParsing="false" onAction="#fasilitasKembali" text="Kembali">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="layarIsiKeranjang" prefHeight="649.0" prefWidth="700.0" visible="false">
+         <children>
+            <AnchorPane layoutX="153.0" layoutY="246.0" prefHeight="189.0" prefWidth="338.0" style="-fx-background-color: #254187; -fx-background-radius: 8 8 8 8;">
+               <children>
+                  <Label layoutX="32.0" layoutY="14.0" text="Masukan Produk Ke Keranjang" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="32.0" layoutY="48.0" prefHeight="70.0" prefWidth="275.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TextField prefHeight="70.0" prefWidth="275.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children></TextFlow>
+                  <Button layoutX="204.0" layoutY="141.0" mnemonicParsing="false" onAction="#tambahProdukKeranjang" prefHeight="25.0" prefWidth="103.0" text="Tambah" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
